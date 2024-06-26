@@ -4,7 +4,7 @@ import {
   AXObjectModelRelationConcept,
   AXObjectName,
   TAXObjectQueryMap,
-} from "../types.js";
+} from "./types.js";
 
 type TAXObjectRoleTuple = [AXObjectName, AXObjectModelRelationConcept[]];
 type TAXObjectRoleElements = TAXObjectRoleTuple[];

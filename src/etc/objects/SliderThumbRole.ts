@@ -1,4 +1,4 @@
-import type { AXObjectModelDefinition } from "../../../types.js";
+import type { AXObjectModelDefinition } from "../../types.js";
 const SliderThumbRole: AXObjectModelDefinition = {
   relatedConcepts: [],
   type: "structure",

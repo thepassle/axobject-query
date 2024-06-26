@@ -2,18 +2,31 @@
   "name": "@thepassle/axobject-query",
   "version": "4.0.0",
   "description": "Programmatic access to information about the AXObject Model",
-  "main": "lib/src/index.js",
+  "main": "./dist/commonjs/index.js",
   "exports": {
     ".": {
-      "types": "./lib/src/index.d.ts",
-      "default": "./lib/src/index.js"
+      "import": {
+        "source": "./src/index.ts",
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "source": "./src/index.ts",
+        "types": "./dist/commonjs/index.d.ts",
+        "default": "./dist/commonjs/index.js"
+      }
     }
   },
-  "type": "module",
   "files": [
-    "lib"
+    "dist"
   ],
+  "tshy": {
+    "exports": {
+      ".": "./src/index.ts"
+    }
+  },
   "scripts": {
+    "prepare": "tshy",
     "build": "rimraf lib && tsc",
     "prepublishOnly": "npm run build",
     "test": "npm run build && npm run jest",
@@ -48,6 +61,7 @@
     "jest": "^29.2.1",
     "prettier": "^3.3.2",
     "rimraf": "^5.0.7",
+    "tshy": "^1.16.2",
     "typescript": "^5.5.2"
   },
   "jest": {
@@ -58,5 +72,7 @@
     "roots": [
       "<rootDir>/__tests__"
     ]
-  }
+  },
+  "types": "./dist/commonjs/index.d.ts",
+  "type": "module"
 }

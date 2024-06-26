@@ -5,7 +5,7 @@ import type {
   AXObjectModelRelationConcept,
   AXObjectName,
   TAXObjectQueryMap,
-} from "../types.js";
+} from "./types.js";
 
 type TElementAXObjectTuple = [AXObjectModelRelationConcept, AXObjectName[]];
 type TElementAXObjects = TElementAXObjectTuple[];

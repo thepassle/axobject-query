@@ -128,7 +128,7 @@ import type {
   AXObjectModelDefinition,
   AXObjectName,
   TAXObjectQueryMap,
-} from "../types.js";
+} from "./types.js";
 
 type TAXObjectsTuple = [AXObjectName, AXObjectModelDefinition];
 type TAXObjects = TAXObjectsTuple[];
