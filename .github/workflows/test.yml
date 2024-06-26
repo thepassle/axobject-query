@@ -25,27 +25,13 @@ jobs:
       - name: Npm Install
         run: npm ci
       - name: Run Jest
-        run: npm run test:ci
+        run: npm run build && npm run test:ci
       - name: Run Coveralls
         uses: coverallsapp/github-action@1.1.3
         if: matrix.node == '16'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path-to-lcov: ./reports/lcov.info
-  flow:
-    name: Flow type checking
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Load Node
-        uses: actions/setup-node@v3
-        with:
-          cache: npm
-      - name: Npm Install
-        run: npm ci
-      - name: Flow type check
-        run: npm run flow
   eslint:
     name: ESLint (Node v${{ matrix.node }})
     runs-on: ubuntu-latest

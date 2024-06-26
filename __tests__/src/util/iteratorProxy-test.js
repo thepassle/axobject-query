@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-import expect from 'expect';
-import iteratorProxy from '../../../src/util/iteratorProxy';
+import { expect } from 'expect';
+import iteratorProxy from '../../../lib/src/util/iteratorProxy.js';
 
 describe('iteratorProxy', function () {
   it('should create an iterator for the bound array', function () {

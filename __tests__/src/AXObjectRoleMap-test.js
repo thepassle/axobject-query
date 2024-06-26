@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-import expect from 'expect';
-import AXObjectRoleMap from '../../src/AXObjectRoleMap';
+import { expect } from 'expect';
+import AXObjectRoleMap from '../../lib/src/AXObjectRoleMap.js';
 
 const entriesList = [
   ["AlertDialogRole", [{"name": "alertdialog"}]],

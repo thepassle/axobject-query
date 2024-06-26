@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-import expect from 'expect';
-import elementAXObjectMap from '../../src/elementAXObjectMap';
+import { expect } from 'expect';
+import elementAXObjectMap from '../../lib/src/elementAXObjectMap.js';
 
 const entriesList = [
   [{"name": "abbr"}, ["AbbrRole"]],
@@ -224,7 +224,7 @@ describe('elementAXObjectMap', function () {
     });
     describe('keys(), iteration', function() {
       const entriesKeys = entriesList.map(entry => entry[0]);
-      test.each(elementAXObjectMap.keys())('Testing key: %o', (key) => {
+      test.each([...elementAXObjectMap.keys()])('Testing key: %o', (key) => {
         expect(entriesKeys).toEqual(
           expect.arrayContaining([key]),
         );

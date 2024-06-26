@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-import expect from 'expect';
-import iterationDecorator from '../../../src/util/iterationDecorator';
+import { expect } from 'expect';
+import iterationDecorator from '../../../lib/src/util/iterationDecorator.js';
 
 describe('iterationDecorator', function () {
   describe('should add a Symbol.iterator property to a collection', function () {

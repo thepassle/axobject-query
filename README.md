@@ -1,21 +1,19 @@
-**NOTICE: The API for AXObject Query is very much under development until a major version release. Please be aware that data structures might change in minor version releases before 1.0.0 is released.**
+**NOTICE: Fork of [axobject-query](https://github.com/A11yance/axobject-query), refactored to TypeScript and published as ESM.**
 
 # AXObject Query
-
-![CI](https://github.com/A11yance/axobject-query/workflows/CI/badge.svg)
 
 Approximate model of the [Chrome AXObject](https://cs.chromium.org/chromium/src/third_party/WebKit/Source/modules/accessibility/AXObject.h).
 
 The project attempts to map the AXObject concepts to the [WAI-ARIA 1.1 Roles Model](https://www.w3.org/TR/wai-aria-1.1/#roles) so that a complete representation of the semantic HTML layer, as it is exposed assistive technology, can be obtained.
 
-CDN URL: <https://unpkg.com/axobject-query>
+CDN URL: <https://unpkg.com/@thepassle/axobject-query>
 
 ## Utilities
 
 ### AXObjects
 
 ```javascript
-import { AXObjects } from 'axobject-query';
+import { AXObjects } from '@thepassle/axobject-query';
 ```
 
 #### Interface

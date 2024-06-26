@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-import expect from 'expect';
-import AXObjectsMap from '../../src/AXObjectsMap';
+import { expect } from 'expect';
+import AXObjectsMap from '../../lib/src/AXObjectsMap.js';
 
 const entriesList = [
   ["AbbrRole", expect.objectContaining({relatedConcepts: [{module: 'HTML',concept: {name: 'abbr',},},],type: 'structure',})],

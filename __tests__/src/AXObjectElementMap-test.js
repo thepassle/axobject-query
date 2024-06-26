@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-import expect from 'expect';
-import AXObjectElementMap from '../../src/AXObjectElementMap';
+import { expect } from 'expect';
+import AXObjectElementMap from '../../lib/src/AXObjectElementMap.js';
 
 const entriesList = [
   ["AbbrRole", [{"name": "abbr"}]],
